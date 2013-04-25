@@ -6,8 +6,11 @@
  
  <p>
   <select>
-    <!-- <option value="volvo">Volvo</option> -->
-
+    <% if !@languages.blank? %>
+      <% for language in @languages %>
+        <option value="<%= language.value %>"><%= language.name %></option>
+      <% end %>
+    <% end %>
   </select>
  </p>
 

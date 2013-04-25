@@ -1,2 +1,28 @@
-<h1>Languages#index</h1>
-<p>Find me in app/views/languages/index.html.erb</p>
+<h1><%= t("languages.index.title") %></h1>
+
+<p><%= t("languages.index.description") %></p>
+
+<% if flash[:info] %>
+<div class="alert alert-info">
+  <%= flash[:info] %>
+</div>
+<% end %>
+
+<div class="row-fluid">
+  <div class="span4"><h4><%= t("activerecord.attributes.language.name") %><h4></div>
+  <div class="span4"><h4><%= t("activerecord.attributes.language.value") %><h4></div>
+</div>
+
+<% @languages.each do |language| %>
+<div class="row-fluid">
+  <div class="span4"><%= language.name %></div>
+  <div class="span4"><%= language.value%></div>
+  <div class="span1">
+    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    delete_language_path(language),
+    :method => :delete,
+    :class => 'btn btn-mini btn-danger' %>
+  </div>
+</div>
+<% end %>
+<%= link_to t("languages.index.new_language"), new_language_path %>

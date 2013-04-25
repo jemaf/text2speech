@@ -1,2 +1,26 @@
-<h1>Languages#new</h1>
-<p>Find me in app/views/languages/new.html.erb</p>
+<h1><%= t("languages.new.title") %></h1>
+
+<p><%= t("languages.new.description") %></p>
+
+   <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <p><%= flash[:notice] %></p>
+    </div>
+    <% end %>
+    <% if flash[:error] %>
+    <div class="alert alert-error">
+      <% if @language.errors.any? %>
+      <ul>
+        <% @language.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
+    <% end %>
+
+<%= simple_form_for @language, :url => new_language_path do |f| %>
+  <%= f.input :name %>
+  <%= f.input :value %>
+  <%= f.submit%>
+<% end %>
