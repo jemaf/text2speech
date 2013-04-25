@@ -137,6 +137,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    tts (0.3.0)
     twitter-bootstrap-rails (2.2.6)
       actionpack (>= 3.1)
       execjs
@@ -163,5 +164,6 @@ DEPENDENCIES
   rspec-rails
   therubyracer
   thin
+  tts
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

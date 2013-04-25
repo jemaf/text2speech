@@ -8,7 +8,19 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="span9"><%= yield %></div>
+<div class="span3">
+<p>
+<h3><%=t("application.about.howitworks")%></h3>
+
+<p> <%=t("application.about.howitworks.text")%> </p>
+
+<ol>
+  <li><%=t("application.about.howitworks.step1")%></li>
+  <li><%=t("application.about.howitworks.step2")%></li>
+  <li><%=t("application.about.howitworks.step2")%></li>
+</ol>
+</div>
 
 </body>
 </html>
