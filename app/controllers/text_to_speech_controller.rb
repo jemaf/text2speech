@@ -10,7 +10,7 @@ class TextToSpeechController < ApplicationController
     lang = params[:languages]
 
     if text.present?
-      file_name = Time.now.to_i.to_s + ".mp3"
+      file_name = "audio/" + Time.now.to_i.to_s + ".mp3"
       text.to_file lang, file_name
       send_file file_name
     else
