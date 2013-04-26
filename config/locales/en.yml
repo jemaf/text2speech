@@ -1,5 +1,44 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  tts:
+    index:
+      title: "Text to Speech Translator (TTS)"
+      text:
+        name: "Text that will be translated"
+      languages:
+        name: "Text language"
+      submit: "Translate"
+
+  application:
+    about:
+      howitworks: 
+        title: "How it works"
+        text: "To translate a text into an audio, follow these steps:"
+        step1: "Type the text that you want to translate"
+        step2: "Choose the text language"
+        step3: "Download the translated text (click on the button)."
+        step4: "Enjoy the audio :)"
+
+  activerecord:
+    attributes:
+      language:
+        name: "Name"
+        value: "Value"
+
+  errors:
+    messages:
+      blank: "is necessary"
+
+  languages:
+    index:
+      title: "Languages"
+      description: "Languages "
+      new_language: "New language"
+    new:
+      title: "New language"
+      description: "Add a new language"
+
+  flash:
+    languages: 
+      create:
+        notice: "Language successfully created"
+      delete: "Language successfully deleted"

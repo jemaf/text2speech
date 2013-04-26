@@ -8,11 +8,10 @@ class LanguagesController < ApplicationController
 
     if @language.save
       flash.now[:notice] = t("flash.languages.create.notice")
+      redirect_to languages_path
     else
       flash.now[:error] = t("flash.languages.create.error")
     end
-    
-    render :new
   end
 
   def delete

@@ -1,21 +1,35 @@
 <h1><%= t("tts.index.title") %></h1>
 
-<p>
-  <textarea class="input-xxlarge" rows="20"></textarea>
-</p>
- 
- <p>
-  <select>
-    <% if !@languages.blank? %>
-      <% for language in @languages %>
-        <option value="<%= language.value %>"><%= language.name %></option>
-      <% end %>
+
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <p><%= flash[:notice] %></p>
+    </div>
     <% end %>
-  </select>
- </p>
+    <% if flash[:error] %>
+    <div class="alert alert-error">
+      <%= flash[:error] %>
+    </div>
+  <% end %>
 
-<p>
-  <button class="btn btn-large btn-primary" type="button"><%=t("tts.index.submit")%></button>
-</p>
+<form method="post">
+  <p><%= t("tts.index.text.name") %></p>
+  <p>
+    <textarea name="translation_text" class="input-xxlarge" rows="20"></textarea>
+  </p>
+   <p><%= t("tts.index.languages.name") %></p>
 
+   <p>
+    <select name="languages">
+      <% if !@languages.blank? %>
+        <% for language in @languages %>
+          <option value="<%= language.value %>"><%= language.name %></option>
+        <% end %>
+      <% end %>
+    </select>
+   </p>
 
+  <p>
+    <input class="btn btn-large btn-primary" type="submit" value="Submit"></submit>
+  </p>
+</form>

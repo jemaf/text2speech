@@ -1,0 +1,47 @@
+pt-BR:
+  tts:
+    index:
+      title: "Conversor Text to Speech (TTS)"
+      text:
+        name: "Texto a ser convertido"
+      languages:
+        name: "Língua do texto"
+      submit: "Converter"
+
+  application:
+    about:
+      howitworks: 
+        title: "Como funciona"
+        text: "Para converter um texto em áudio, você deve:"
+        step1: "Digitar o texto que você deseja converter"
+        step2: "Escolher a língua correta para aquele texto"
+        step3: "Fazer o download da conversão (clicar no botão)."
+        step4: "Desfrutar da conversão :)"
+
+  activerecord:
+    attributes:
+      language:
+        name: "Nome"
+        value: "Valor"
+
+  errors:
+    messages:
+      blank: "é obrigatório"
+
+  languages:
+    index:
+      title: "Línguas cadastradas"
+      description: "Lista das línguas cadastradas"
+      new_language: "Nova língua"
+    new:
+      title: "Nova língua"
+      description: "Cadastre uma nova língua"
+
+  flash:
+    languages: 
+      create:
+        notice: "língua criada com sucesso"
+      delete: "língua excluída com sucesso"
+    tts:
+      no_message: "Texto é obrigatório"
+
