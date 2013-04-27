@@ -4,17 +4,14 @@ gem 'rails', '3.2.13'
 gem 'tts'
 gem 'sqlite3'
 gem 'simple_form'
+gem 'twitter-bootstrap-rails'
+gem "less-rails"
 
 gem 'thin'
 
 group :assets do
-  
-  gem "less-rails"
-
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
-
-  gem 'twitter-bootstrap-rails'
 end
 
 group :development do
