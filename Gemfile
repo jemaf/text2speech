@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'tts'
+gem "bing_translator"
 gem 'sqlite3'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'

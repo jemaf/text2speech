@@ -5,13 +5,15 @@ class TextToSpeechController < ApplicationController
   end
 
   def create
-
+    translator = BingTranslator.new('jemaf', 'RYpFKXu5O/Q5/mAZ/KAfbx+LdUSWNorD6hjPEduzkVg=')
     text = params[:translation_text]
     lang = params[:languages]
 
     if text.present?
       file_name = "audio/" + Time.now.to_i.to_s + ".mp3"
-      text.to_file lang, file_name
+      audio = translator.speak "#{text}", :language => "#{lang}", 
+            :format => 'audio/mp3', :options => 'MaxQuality'
+      open(file_name, 'wb') { |f| f.write audio }
       send_file file_name
     else
       flash[:error] = t("flash.tts.no_message")
